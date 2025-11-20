@@ -1,8 +1,6 @@
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-
-import static org.testng.AssertJUnit.assertEquals;
-
+import static org.testng.Assert.assertEquals;
 public class ShoppingCartTest extends BaseTest {
 
     String expectedSauceLabsBackpackPrice = "$29.99";
@@ -15,7 +13,7 @@ public class ShoppingCartTest extends BaseTest {
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         String actualProductName = driver.findElement(By.cssSelector(".inventory_item_name")).getText();
 
-        assertEquals(expectedSauceLabsBackpackPriceName, actualProductName);
+        assertEquals(actualProductName, expectedSauceLabsBackpackPriceName);
     }
 
     @Test
@@ -25,6 +23,6 @@ public class ShoppingCartTest extends BaseTest {
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
         String actualProductPrice = driver.findElement(By.cssSelector(".inventory_item_price")).getText();
 
-        assertEquals(expectedSauceLabsBackpackPrice, actualProductPrice);
+        assertEquals(actualProductPrice, expectedSauceLabsBackpackPrice);
     }
 }

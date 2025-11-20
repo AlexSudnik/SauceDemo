@@ -91,6 +91,7 @@ public class XpathSearchTest extends BaseTest{
 
     @Test
     void testLocatorOnConditionAnd(){
+        goOnURL();
         boolean isLocatorOnConditionAndDisplayed =
                 driver.findElement(By.xpath("//input[@class= 'input_error form_input' and @type='text']"))
                         .isDisplayed();
@@ -98,5 +99,3 @@ public class XpathSearchTest extends BaseTest{
         assertTrue(isLocatorOnConditionAndDisplayed, "локатор по условию And не найден");
     }
 }
-
-

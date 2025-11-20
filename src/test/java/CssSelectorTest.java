@@ -1,8 +1,6 @@
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
-
 import static org.testng.Assert.assertTrue;
-
 public class CssSelectorTest extends BaseTest{
 
     @Test
