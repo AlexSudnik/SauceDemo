@@ -26,6 +26,4 @@ public class SauceDemoCasesTest extends BaseTest{
 
         assertEquals(actualMessageText, expectedMessageText);
     }
-
-
 }
