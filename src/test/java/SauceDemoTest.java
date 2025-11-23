@@ -1,10 +1,12 @@
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+
 import static org.testng.Assert.assertTrue;
-public class SauceDemoTest extends BaseTest{
+
+public class SauceDemoTest extends BaseTest {
 
     @Test
-    void testLocatorById(){
+    void testLocatorById() {
         goOnURL();
         boolean isIdLocatorDisplayed = driver.findElement(By.id("user-name")).isDisplayed();
 
@@ -12,7 +14,7 @@ public class SauceDemoTest extends BaseTest{
     }
 
     @Test
-    void testLocatorByName(){
+    void testLocatorByName() {
         goOnURL();
         boolean isNameLocatorDisplayed = driver.findElement(By.name("login-button")).isDisplayed();
 
@@ -20,7 +22,7 @@ public class SauceDemoTest extends BaseTest{
     }
 
     @Test
-    void testLocatorByTag(){
+    void testLocatorByTag() {
         goOnURL();
         boolean isTagNameDisplayed = driver.findElement(By.tagName("h4")).isDisplayed();
 
@@ -28,7 +30,7 @@ public class SauceDemoTest extends BaseTest{
     }
 
     @Test
-    void testLocatorByPartialLinktext(){
+    void testLocatorByPartialLinktext() {
         successLogin();
         boolean isPartialLinkTextDisplayed = driver.findElement(By.partialLinkText("Twitter")).isDisplayed();
 

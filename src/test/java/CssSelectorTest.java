@@ -1,10 +1,12 @@
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+
 import static org.testng.Assert.assertTrue;
-public class CssSelectorTest extends BaseTest{
+
+public class CssSelectorTest extends BaseTest {
 
     @Test
-    void testLocatorByClass(){
+    void testLocatorByClass() {
         goOnURL();
         boolean isLocatorByClassDisplayed = driver.findElement(By.cssSelector(".submit-button")).isDisplayed();
 
@@ -12,7 +14,7 @@ public class CssSelectorTest extends BaseTest{
     }
 
     @Test
-    void testLocatorBy2Classes(){
+    void testLocatorBy2Classes() {
         goOnURL();
         boolean isLocatorBy2ClassesDisplayed = driver.findElement(By.cssSelector(".submit-button.btn_action"))
                 .isDisplayed();
@@ -21,7 +23,7 @@ public class CssSelectorTest extends BaseTest{
     }
 
     @Test
-    void testLocatorByInnerClass(){
+    void testLocatorByInnerClass() {
         goOnURL();
         boolean isLocatorByInnerClassDisplayed = driver.findElement(By.cssSelector(".form_group .input_error"))
                 .isDisplayed();
@@ -30,7 +32,7 @@ public class CssSelectorTest extends BaseTest{
     }
 
     @Test
-    void testLocatorById(){
+    void testLocatorById() {
         goOnURL();
         boolean isLocatorByIdDisplayed = driver.findElement(By.cssSelector("#user-name")).isDisplayed();
 
@@ -38,7 +40,7 @@ public class CssSelectorTest extends BaseTest{
     }
 
     @Test
-    void testLocatorByTagName(){
+    void testLocatorByTagName() {
         goOnURL();
         boolean isLocatorByTagNameDisplayed = driver.findElement(By.cssSelector("input")).isDisplayed();
 
@@ -46,7 +48,7 @@ public class CssSelectorTest extends BaseTest{
     }
 
     @Test
-    void testLocatorByTagAndClass(){
+    void testLocatorByTagAndClass() {
         goOnURL();
         boolean isLocatorByTagAndClassDisplayed = driver.findElement(By.cssSelector("input.submit-button")).isDisplayed();
 
@@ -54,7 +56,7 @@ public class CssSelectorTest extends BaseTest{
     }
 
     @Test
-    void testLocatorByFullAttribute(){
+    void testLocatorByFullAttribute() {
         goOnURL();
         boolean isLocatorByFullAttributeDisplayed = driver.findElement(By.cssSelector("[data-test='login-button']"))
                 .isDisplayed();
@@ -63,16 +65,16 @@ public class CssSelectorTest extends BaseTest{
     }
 
     @Test
-    void testLocatorByPartAttrib(){
+    void testLocatorByPartAttrib() {
         goOnURL();
         boolean isLocatorByPartAttribDisplayed = driver.findElement(By.cssSelector("[data-test~='login-button']"))
                 .isDisplayed();
 
-        assertTrue(isLocatorByPartAttribDisplayed,"локатор по части аттрибута не найден");
+        assertTrue(isLocatorByPartAttribDisplayed, "локатор по части аттрибута не найден");
     }
 
     @Test
-    void LocatorByVerticalBar(){
+    void LocatorByVerticalBar() {
         successLogin();
         boolean isLocatorByVerticalBarDisplayed = driver.findElement(By.cssSelector("[data-test|='social']"))
                 .isDisplayed();
@@ -81,7 +83,7 @@ public class CssSelectorTest extends BaseTest{
     }
 
     @Test
-    void LocatorByBeginning(){
+    void LocatorByBeginning() {
         successLogin();
         boolean isLocatorByBeginningDisplayed = driver.findElement(By.cssSelector("[href^='https://twitter']"))
                 .isDisplayed();
@@ -90,7 +92,7 @@ public class CssSelectorTest extends BaseTest{
     }
 
     @Test
-    void LocatorByEnding(){
+    void LocatorByEnding() {
         successLogin();
         boolean isLocatorByEndingDisplayed = driver.findElement(By.cssSelector("[href$='tter.com/saucelabs']"))
                 .isDisplayed();
@@ -99,7 +101,7 @@ public class CssSelectorTest extends BaseTest{
     }
 
     @Test
-    void LocatorByContains(){
+    void LocatorByContains() {
         successLogin();
         boolean isLocatorByContainsDisplayed = driver.findElement(By.cssSelector("[href*='facebook.co']"))
                 .isDisplayed();

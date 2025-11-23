@@ -1,10 +1,12 @@
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+
 import static org.testng.Assert.assertEquals;
-public class SauceDemoCasesTest extends BaseTest{
+
+public class SauceDemoCasesTest extends BaseTest {
 
     @Test
-    void validUsernameAndPasswordTest(){
+    void validUsernameAndPasswordTest() {
         driver.get("https://www.saucedemo.com/");
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
@@ -16,7 +18,7 @@ public class SauceDemoCasesTest extends BaseTest{
     }
 
     @Test
-    void validUsernameAndInvalidPasswordTest(){
+    void validUsernameAndInvalidPasswordTest() {
         driver.get("https://www.saucedemo.com/");
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("12345");

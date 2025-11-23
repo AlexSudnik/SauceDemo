@@ -1,10 +1,12 @@
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+
 import static org.testng.Assert.assertTrue;
-public class XpathSearchTest extends BaseTest{
+
+public class XpathSearchTest extends BaseTest {
 
     @Test
-    void testLocatorByAttribute(){
+    void testLocatorByAttribute() {
         goOnURL();
         boolean isLocatorByAttributeDisplayed =
                 driver.findElement(By.xpath("//input[@type='submit']")).isDisplayed();
@@ -13,7 +15,7 @@ public class XpathSearchTest extends BaseTest{
     }
 
     @Test
-    void testLocatorByText(){
+    void testLocatorByText() {
         goOnURL();
         boolean isLocatorByTextDisplayed =
                 driver.findElement(By.xpath("//h4[text()='Password for all users:']")).isDisplayed();
@@ -22,7 +24,7 @@ public class XpathSearchTest extends BaseTest{
     }
 
     @Test
-    void testLocatorByContainsText(){
+    void testLocatorByContainsText() {
         goOnURL();
         boolean isLocatorByContainsTextDisplayed =
                 driver.findElement(By.xpath("//h4[contains(text(), 'all users')]")).isDisplayed();
@@ -31,7 +33,7 @@ public class XpathSearchTest extends BaseTest{
     }
 
     @Test
-    void testLocatorByContainsAttr(){
+    void testLocatorByContainsAttr() {
         goOnURL();
         boolean isLocatorByContainsAttrDisplayed =
                 driver.findElement(By.xpath("//input[contains(@class, 'submit-b')]")).isDisplayed();
@@ -40,7 +42,7 @@ public class XpathSearchTest extends BaseTest{
     }
 
     @Test
-    void testLocatorByAncestor(){
+    void testLocatorByAncestor() {
         goOnURL();
         boolean isLocatorByAncestorDisplayed =
                 driver.findElement(By.xpath("//input[contains(@class, 'submit-b')]//ancestor::form"))
@@ -50,7 +52,7 @@ public class XpathSearchTest extends BaseTest{
     }
 
     @Test
-    void testLocatorByDescendant(){
+    void testLocatorByDescendant() {
         goOnURL();
         boolean isLocatorByDescendantDisplayed =
                 driver.findElement(By.xpath("//div[@class='login-box']//descendant::input[2]"))
@@ -60,7 +62,7 @@ public class XpathSearchTest extends BaseTest{
     }
 
     @Test
-    void testLocatorByFollowing(){
+    void testLocatorByFollowing() {
         goOnURL();
         boolean isLocatorByFollowingDisplayed =
                 driver.findElement(By.xpath("//div[@class='login-box']//following::div[1]"))
@@ -70,7 +72,7 @@ public class XpathSearchTest extends BaseTest{
     }
 
     @Test
-    void testLocatorByParent(){
+    void testLocatorByParent() {
         goOnURL();
         boolean isLocatorByParentDisplayed =
                 driver.findElement(By.xpath("//input[contains(@class, 'submit-button')]/parent::*"))
@@ -80,7 +82,7 @@ public class XpathSearchTest extends BaseTest{
     }
 
     @Test
-    void testLocatorOnPreceding(){
+    void testLocatorOnPreceding() {
         goOnURL();
         boolean isLocatorOnPrecedingDisplayed =
                 driver.findElement(By.xpath("//input[contains(@class, 'submit-button')]/preceding::div[3]"))
@@ -90,7 +92,7 @@ public class XpathSearchTest extends BaseTest{
     }
 
     @Test
-    void testLocatorOnConditionAnd(){
+    void testLocatorOnConditionAnd() {
         goOnURL();
         boolean isLocatorOnConditionAndDisplayed =
                 driver.findElement(By.xpath("//input[@class= 'input_error form_input' and @type='text']"))

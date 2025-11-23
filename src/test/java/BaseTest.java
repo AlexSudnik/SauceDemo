@@ -4,6 +4,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.chrome.ChromeOptions;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
+
 import java.time.Duration;
 import java.time.temporal.ChronoUnit;
 
@@ -11,11 +12,11 @@ public class BaseTest {
 
     WebDriver driver;
 
-    void goOnURL(){
+    void goOnURL() {
         driver.get("https://www.saucedemo.com/");
     }
 
-    void successLogin(){
+    void successLogin() {
         driver.get("https://www.saucedemo.com/");
         driver.findElement(By.id("user-name")).sendKeys("standard_user");
         driver.findElement(By.id("password")).sendKeys("secret_sauce");
@@ -23,7 +24,7 @@ public class BaseTest {
     }
 
     @BeforeMethod
-    public void setUp(){
+    public void setUp() {
         ChromeOptions options = new ChromeOptions();
         //options.addArguments("--headless");
         options.addArguments("--incognito");
@@ -33,7 +34,7 @@ public class BaseTest {
     }
 
     @AfterMethod(alwaysRun = true)
-    public  void  tearDown(){
+    public void tearDown() {
         driver.quit();
     }
 }

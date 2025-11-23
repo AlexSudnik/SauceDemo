@@ -1,13 +1,15 @@
 import org.openqa.selenium.By;
 import org.testng.annotations.Test;
+
 import static org.testng.Assert.assertEquals;
+
 public class ShoppingCartTest extends BaseTest {
 
     String expectedSauceLabsBackpackPrice = "$29.99";
     String expectedSauceLabsBackpackPriceName = "Sauce Labs Backpack";
 
     @Test
-    void testProductName(){
+    void testProductName() {
         successLogin();
         driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
@@ -17,7 +19,7 @@ public class ShoppingCartTest extends BaseTest {
     }
 
     @Test
-    void testProductPrice(){
+    void testProductPrice() {
         successLogin();
         driver.findElement(By.id("add-to-cart-sauce-labs-backpack")).click();
         driver.findElement(By.cssSelector(".shopping_cart_link")).click();
